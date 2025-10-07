@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RiderLink GH - Search Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#00a854",
+              "background-light": "#f5f8f7",
+              "background-dark": "#0f2319",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-10 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm shadow-sm">
+<div class="container mx-auto flex items-center justify-between p-4">
+<div class="flex items-center gap-2">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-2xl"> two_wheeler </span>
+</div>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">RiderLink GH</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="rounded-full p-2 text-gray-600 hover:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 md:hidden">
+<span class="material-symbols-outlined"> menu </span>
+</button>
+<img alt="User profile picture" class="h-10 w-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmrVS6cCq6JepAnAbve8Sz0_lYOGw8ObksogjTkUKPweRrIZRhd2j6m7bwQVRJvMkffhc8X7DhG4Ps6VCZoJU9v75iISuZCE5fQgMXXXJDaDAI4n3Dk_XYOyPITjvJl2Vc4pTsIF9CMSQ5sDNyQlnxsAOZsXpMLNw686_KbJtO45OpBU2wzSs8X-nQynjznfhvbwnywE9cZ2nCA6xe-5BdcVSI9A-FKuXJQPxCcSh0-KccPeTKnzbmcIcjRNkwjSWBpiVbDEkJBG8"/>
+</div>
+</div>
+</header>
+<main class="container mx-auto flex-grow p-4">
+<div class="mx-auto max-w-2xl">
+<div class="mb-8">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"> search </span>
+<input class="w-full rounded-full border-gray-200 bg-white py-3 pl-12 pr-4 text-gray-900 shadow-sm focus:border-primary focus:ring-primary dark:border-gray-700 dark:bg-gray-800 dark:text-white" placeholder="Search for riders by location..." type="text"/>
+</div>
+</div>
+<div class="mb-6 flex items-center justify-between">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Available Riders</h2>
+<div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+<span>Sort by:</span>
+<button class="font-medium text-primary">Distance</button>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-lg dark:bg-gray-800">
+<img alt="Kwame Mensah" class="h-20 w-20 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgpsEOMRioszVEAqcTMccqynJn89oHWJkRm4OAdmPJI6AkavCrtYkdDeNaX2mPPhV_E5ez2PPgolUfWMbUjuLVPVZoiMLdwO1LzY8eycivy8qjxBf52yz-6Stisf4BGrLH92-quTuHCi3pwy3Fc3QUtzVZisvvmG1I0LwviBCrcC93iTq9Hc9vgQlT0CytISs5Fg10J2uAzqykURDYz2gXfHT48loiunLVpHk8pn4na9wkiHmA158hzztiG2iY57rl22UOQlEiqis"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Kwame Mensah</h3>
+<div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-base text-yellow-500"> star </span>
+<span class="font-medium">4.8</span>
+<span>•</span>
+<span>1.2 km away</span>
+</div>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Accra, East Legon</p>
+</div>
+<a class="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary/90" href="#">
+<span class="material-symbols-outlined text-lg"> chat </span>
+<span>Message</span>
+</a>
+</div>
+<div class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-lg dark:bg-gray-800">
+<img alt="Aisha Ibrahim" class="h-20 w-20 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkQ13--wkHUoCx60TlqMbgLp8uBcS-HGz7PHy_GgFgyvEOCJO8sECXBY3uOSVphr0PcZwSRHd1tscGkyC2y6eGnCKsRODIW8QfO_8zv9tT9qcWZF-nRVwyQXDIRKL78Dr8xIsDQfLHATe224r2x9Ar6NJ2DrBPqGv4BB5C_NA6kdPVXzTa-7k9q0PyCC8acTV_WY6hmp_z025w5-9i8V4fIPqRnedwYmXbbs9HcO9V5PSutCSGf10cXIhGtGDzLgUfCqaawlg9sV0"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Aisha Ibrahim</h3>
+<div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-base text-yellow-500"> star </span>
+<span class="font-medium">4.9</span>
+<span>•</span>
+<span>2.5 km away</span>
+</div>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Kumasi, Adum</p>
+</div>
+<a class="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary/90" href="#">
+<span class="material-symbols-outlined text-lg"> chat </span>
+<span>Message</span>
+</a>
+</div>
+<div class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-lg dark:bg-gray-800">
+<img alt="Yaw Boateng" class="h-20 w-20 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNkbBMsRRKS3bYGZVvZsZfyAAtHjV2TSLAUpmGBfgYYfRaCSpzbAEhN5A1yzhxkjHHu4XSM8KUEMYOFGHFCv5m-GjgpJ6oLiXj2MK_mPaWYfNa0gMkI-MYBhtQstQ9Gq4---LHJOodv4RiTe1CGCp98ZqkjPYfkCEkkq2-pp7Xufl3uLorPJzqbvb2OXIdEbxt3M_vCXMJ0ZIcSmH7W_T4DIjeG2iYMLegRFGnrzPhEw5G5GGi4P8fPkyAFt1mUMHclhgwQTXusR4"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Yaw Boateng</h3>
+<div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-base text-yellow-500"> star </span>
+<span class="font-medium">4.7</span>
+<span>•</span>
+<span>3.1 km away</span>
+</div>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Cape Coast, UCC</p>
+</div>
+<a class="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary/90" href="#">
+<span class="material-symbols-outlined text-lg"> chat </span>
+<span>Message</span>
+</a>
+</div>
+<div class="flex items-center gap-4 rounded-xl bg-white p-4 shadow-sm transition-shadow hover:shadow-lg dark:bg-gray-800">
+<img alt="Akosua Owusu" class="h-20 w-20 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEGIdQOgVMLUNFQ5bKcKrsOkFiEmJVDm91UFhhwH7LopV2L0WBPH_N8BFQ2WN8Fda2izU8t_c10XKog6c5clco6sa9PuqR1ZvBImwQafNGAY24w_FbUjCFBiG-zvdd0mAdGCZep8pIc4RWVdhps7KuRIRpNLMQv35X94SQAAvK32Lu0k1jUY8UqYITR03Mw9hhBRSnf4Tt-4VM6431AvGczZX5xJLH_EBPY2f8CM_HIgfLXpEUy5lSifnxnVU4pMJdjklK33yGE1w"/>
+<div class="flex-grow">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Akosua Owusu</h3>
+<div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+<span class="material-symbols-outlined text-base text-yellow-500"> star </span>
+<span class="font-medium">4.6</span>
+<span>•</span>
+<span>4.2 km away</span>
+</div>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Takoradi, Market Circle</p>
+</div>
+<a class="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary/90" href="#">
+<span class="material-symbols-outlined text-lg"> chat </span>
+<span>Message</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RiderLink GH - Find Delivery Riders in Ghana</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00a854",
+                        "background-light": "#f5f8f7",
+                        "background-dark": "#0f2319",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .gradient-overlay {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50 border-b border-primary/20 dark:border-primary/30">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-3">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path><path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">RiderLink GH</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 text-sm font-bold bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">Sign Up</button>
+<button class="px-4 py-2 text-sm font-bold bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary rounded-lg hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors">Login</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<section class="relative bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6b3YqFKrFIxr5Inelc4ybdTScxtxDEARlHxVx8qxd6e6pDERuheVeo1kavrxZlO7mTVZJjSMjfLQxIhW8OToU_0LJz4sjk79mXdSm0wSh3JM-OJA--2w3OGSB02397mK54oexcBkPXAm-Thj51kqvPjWKsmCOxtUeoc_72JXIs73E5ql7t0vQhhRD0u3VzXK6WhsXn2s_OtY5ybMF_djOZQTqpmLvpI3fbi04RR5NbmsyrX4Yn-QMTtLBnX_gSNfBK3exWDVEqr8");'>
+<div class="absolute inset-0 gradient-overlay"></div>
+<div class="relative container mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40 text-center text-white">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight">Find Delivery Riders Near You</h1>
+<p class="mt-4 max-w-2xl mx-auto text-lg">Connect with verified delivery riders in Ghana for fast and reliable service.</p>
+<div class="mt-8 max-w-xl mx-auto">
+<form class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" fill-rule="evenodd"></path>
+</svg>
+</div>
+<input class="w-full pl-11 pr-32 py-4 text-base bg-white/90 dark:bg-background-dark/80 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 border border-gray-300 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition" placeholder="Enter your location" type="text"/>
+<button class="absolute inset-y-0 right-0 m-1.5 px-6 py-2.5 text-sm font-bold bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors" type="submit">Search</button>
+</form>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white">Featured Riders</h2>
+<div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-10">
+<div class="text-center">
+<img alt="Kwame A." class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBchTykcW-1pDG1cHuew9EycicG_U85HG38B3Ky5k3GtDeiq0pTjhyDSWCiLJp6Z7LpCtNMCkdZRg7IC2rGVCx8teHD9BXyJ3Mk4ZRY72WE_JD3lnKDVAGXJUM81py1QehLBygpnXG3Ib7vhpXGlTVDjVMZF8lo2uiMHx3dh1iBtbcBDrvnIh27B8tItYBvx77wxnPEKZ_BOErGFGoGKNcIgN58xbNvDCSEtdZJr1Gg_-lSi6TajA0G3cvBc2pwtfxDrIW72Gp6pJA"/>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Kwame A.</h3>
+<p class="text-primary">Accra</p>
+</div>
+<div class="text-center">
+<img alt="Aisha B." class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEMX2xPXb2RBSBgKBwxDPgQG8Jy09mrAj6sxpeDT-uTYRpn8-wQhP1mM7WoixvBRngmYB56zCLh5hoJ_lT97j0JKKE2qleksfvJVfC-Vhtx8O190wQVjBemPXX1rzrNWmjcp5sUiV2WZtRykIn6nVcSckyRkN5P5vW2haNnWklTTxubVoALYMG6khWPyV1p4hQMFjPPP_g9faXzOir7tHbV82y0hyKB4wPJBFWk_9Z8giG1bA2dIweyEtozs27_nmGjpsXRmQtBCs"/>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Aisha B.</h3>
+<p class="text-primary">Kumasi</p>
+</div>
+<div class="text-center">
+<img alt="Yaw C." class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSSlIxsznPYDFM9cXBSYyBJyaOUOqtoe-YrDQQ00oqLyuqkTX8PE_niXMFO259EBvGGhYZ9wNwOBMBxZgemO82uZfMHidoEtDJWOW2Ai4PzSV0S8jJoIBwYXxk1TgP5LTrdHTQtzofBQ6TLtUAYSYXYnUnBThtyEiSlz1S3E1ara4jwkdQ13jeAVbShRR4Z4hopx8MKJHxOIC8MEZkVsU9o-AAzmiivE8cmg84VQVSTtEkOT28IbF8QUkQBo3nuhXQcdGS48bzKus"/>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Yaw C.</h3>
+<p class="text-primary">Tamale</p>
+</div>
+<div class="text-center">
+<img alt="Esi D." class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT-8k4fPZANaDocWVdq0LNpBOHZWrndgCrkMXHVsaisiTV5YUE94zOhAc07c0NZJMGqWMQDd39hh_yRwQSF2JH_En_ygO1N4C5X7s1N9uUmfua6uSiydktYc8Dbki5WWz0p_0C6vuDodmJpZphlJXTlEMcpNw6RxLVFzeiSpfS5_-HQPDXzUBP0TH9nLEpEEdZ_nNFh-xxGu3a4728sYFpffXNt6KuEzTwVbHubIz7ePHNbmnjRg7PU-yvMKFvopMs5p6tTT18cyA"/>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Esi D.</h3>
+<p class="text-primary">Cape Coast</p>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-background-light dark:bg-background-dark py-16 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white">Delivery Categories</h2>
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group">
+<div class="overflow-hidden rounded-xl">
+<img alt="Bike Delivery" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5UhX3jHP_9SQAHxcsNJmVZBgsZu7Ag2tuL-IE4kYYO2qEM73AvOSQ9EfesFE1dMKGOYnHjSGmcMfuIFQYO78kPYMSx9-sOthu15va5SckI21f-jSVcwgC-jpf9ratROvQFQzURYK5WyZ3GS4QEOgCpv04pvoxvsKOHxpReGVMJ84TQ5IWgv_S6Pkk7DuFdmmR8ewvUxoMIu4a6ejCnr1fLT6AZkrjHQ2PG0Qi8E1bRipvCKCIwsZeBsdxb_zoQiHtBKtymVy1SJ4"/>
+</div>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Bike Delivery</h3>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Fast and efficient for small packages.</p>
+</div>
+<div class="group">
+<div class="overflow-hidden rounded-xl">
+<img alt="Car Delivery" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG9qIBflSktkZYIIC_TzHH5UQnGm0C3w2jlLZzmVe15st5KRhzcta_2I4oSot1P-r1maq57SHaeoBhFoI1y883Cd8QveSilirzgxTbVUT7DUX79dXZoys9vnRELlM0qhLGYF-Iuy4VfmdiM7nlH9LkmibrU3mii83IM3Sn2NaaAVbPwo1OfPjS28DGNPcnNpZUdTMfIFkIQ--jcYe_bpMR-Ipu7Dbdz3l63cTQqeq9-89Qc8imA5oZnouZqPgLgYhC9hnAoVUr5rc"/>
+</div>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Car Delivery</h3>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Ideal for medium-sized deliveries.</p>
+</div>
+<div class="group">
+<div class="overflow-hidden rounded-xl">
+<img alt="Dispatch Van" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDESbpUJ4QOhRp9ObiffxAvh4_yC-JVqF7CXtVw7xOcCPbk0HnJcL8YtKtpQswGRWFWc9OkTz4qwom1BBI-wliZ6gTXA9XdvpnRsUw8j4VqQ4KaaGaDGqJZWTzuCkFKFJTfLLcN1pvXSYxgxKrV25j4bk2jxMCiJ6T-HTN9g4AS4UnGb5m1DC_s33Tk581ZdpTEzrT0M_pSaR4NSCiVBcgGSH8fBXcSPP5Y5vzPZvRgUiWvc_GVELQm--XGA9r2DOM1mtX551V4D8Q"/>
+</div>
+<h3 class="mt-4 text-lg font-bold text-gray-900 dark:text-white">Dispatch Van</h3>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Best for large or bulk orders.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 sm:py-24">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white">Become a RiderLink GH Partner</h2>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">Join our network of professional delivery riders and start earning on your own schedule.</p>
+<div class="mt-8">
+<button class="px-8 py-3 text-base font-bold bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">Sign Up as Rider</button>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-background-light dark:bg-background-dark border-t border-primary/20 dark:border-primary/30">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path><path clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<span class="text-sm text-gray-600 dark:text-gray-400">© 2024 RiderLink GH. All rights reserved.</span>
+</div>
+<div class="flex gap-x-6 gap-y-4 flex-wrap justify-center md:justify-end">
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>

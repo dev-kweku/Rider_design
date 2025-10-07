@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RiderLink GH - Login</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00a854",
+                        "background-light": "#f5f8f7",
+                        "background-dark": "#0f2319",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .form-input::placeholder {
+            color: #4b5563;}
+        .dark .form-input::placeholder {
+            color: #9ca3af;}
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex items-center justify-center min-h-screen p-4">
+<div class="w-full max-w-md mx-auto">
+<div class="bg-white dark:bg-background-dark/50 shadow-lg rounded-xl p-8">
+<div class="flex justify-center mb-6">
+<div class="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-5xl">
+                            two_wheeler
+                        </span>
+</div>
+</div>
+<h1 class="text-2xl font-bold text-center text-gray-900 dark:text-white mb-2">Welcome to RiderLink GH</h1>
+<p class="text-center text-gray-600 dark:text-gray-400 mb-8">Login or create an account to start</p>
+<form class="space-y-6">
+<div>
+<label class="sr-only" for="email_phone">Email or Phone Number</label>
+<input class="form-input w-full px-4 py-3 rounded-lg bg-background-light dark:bg-background-dark border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900 dark:text-white" id="email_phone" name="email_phone" placeholder="Email or Phone Number" required="" type="text"/>
+</div>
+<div>
+<label class="sr-only" for="password">Password</label>
+<input class="form-input w-full px-4 py-3 rounded-lg bg-background-light dark:bg-background-dark border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900 dark:text-white" id="password" name="password" placeholder="Password" required="" type="password"/>
+</div>
+<div>
+<button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors" type="submit">
+                            Log In
+                        </button>
+</div>
+</form>
+<div class="my-6 flex items-center justify-center">
+<div class="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+<span class="mx-4 text-sm text-gray-500 dark:text-gray-400">OR</span>
+<div class="flex-grow border-t border-gray-300 dark:border-gray-600"></div>
+</div>
+<div>
+<button class="w-full flex items-center justify-center py-3 px-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm bg-white dark:bg-transparent hover:bg-primary/10 dark:hover:bg-primary/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors" type="button">
+<svg class="h-5 w-5 mr-3" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M21.99 12.28c0-5.45-4.42-9.88-9.87-9.88C6.67 2.4 2.4 6.83 2.4 12.28c0 4.97 3.66 9.1 8.44 9.77v-7.1h-2.54v-2.67h2.54v-2.02c0-2.52 1.49-3.9 3.78-3.9 1.09 0 2.22.19 2.22.19v2.28h-1.18c-1.24 0-1.63.77-1.63 1.57v1.88h2.82l-.44 2.67h-2.38v7.1c4.78-.67 8.44-4.8 8.44-9.77z"></path>
+</svg>
+<span class="text-base font-medium text-gray-700 dark:text-gray-300">Continue with Google</span>
+</button>
+</div>
+<p class="mt-8 text-center text-sm">
+<a class="font-medium text-primary hover:underline" href="#">Don't have an account? Sign up</a>
+</p>
+</div>
+</div>
+</div>
+
+</body></html>

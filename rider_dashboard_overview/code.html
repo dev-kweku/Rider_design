@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RiderLink GH Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00a854",
+                        "background-light": "#f5f8f7",
+                        "background-dark": "#0f2319",
+                        "text-light": "#0f2319",
+                        "text-dark": "#f5f8f7",
+                        "card-light": "#ffffff",
+                        "card-dark": "#1a382a",
+                        "accent-yellow": "#facc15"
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="flex flex-col min-h-screen">
+<header class="bg-card-light dark:bg-card-dark/50 border-b border-primary/20">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white">two_wheeler</span>
+</div>
+<h1 class="text-xl font-bold text-text-light dark:text-text-dark">RiderLink GH</h1>
+</div>
+<div class="flex items-center gap-4">
+<label class="flex items-center cursor-pointer" for="availability-toggle">
+<div class="relative">
+<input checked="" class="sr-only" id="availability-toggle" type="checkbox"/>
+<div class="block bg-gray-200 dark:bg-gray-700 w-14 h-8 rounded-full"></div>
+<div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition-transform"></div>
+</div>
+<div class="ml-3 text-text-light dark:text-text-dark font-medium">
+                                Online
+                            </div>
+</label>
+<style>
+                            input:checked ~ .dot {
+                                transform: translateX(100%);
+                                background-color: #f5f8f7;
+                            }
+                            input:checked ~ .block {
+                                background-color: #00a854;
+                            }
+                        </style>
+<button class="p-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB31usC3vlTDxMRC9NgkdftN0uGqaRxLGphzUiQx9uGloyduNGBnKlb6qR-WNIKZ_bQrx9gfP8ux06yK-cDjZrbyrNRoWmA-X2E5W6AKRm3_TIEK2EiU_dOUtKSJ7GNVnE7NQiRLvqxUJS8-rRBugEsxuM5D-Mq_Y7DpAxBWEJdbsoPVsfwXODWi2ZaW3VvpGvI_zAB8kyVHDSQ6S7FDRKB-kJxHJE1RNJgVlQ3gOQ9aHQ19k9MU3nfhba7naV-jjHMvTD3USNJ39U')"></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<h2 class="text-3xl font-bold mb-8">Dashboard</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm flex items-center gap-4">
+<div class="p-3 bg-primary/10 rounded-full">
+<span class="material-symbols-outlined text-primary text-3xl">book_online</span>
+</div>
+<div>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Bookings Today</p>
+<p class="text-2xl font-bold">12</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm flex items-center gap-4">
+<div class="p-3 bg-primary/10 rounded-full">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+</div>
+<div>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Total Earnings</p>
+<p class="text-2xl font-bold">GH₵ 250</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm flex items-center gap-4">
+<div class="p-3 bg-accent-yellow/20 rounded-full">
+<span class="material-symbols-outlined text-accent-yellow text-3xl">star</span>
+</div>
+<div>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Reviews</p>
+<p class="text-2xl font-bold">4.8</p>
+</div>
+</div>
+</div>
+<div class="mt-8 bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-lg font-semibold">Earnings</h3>
+<p class="text-3xl font-bold text-primary">GH₵ 250</p>
+<div class="flex items-center text-sm mt-1">
+<span class="text-text-light/70 dark:text-text-dark/70 mr-2">Today</span>
+<span class="flex items-center text-green-500 font-semibold">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+                                10%
+                            </span>
+</div>
+</div>
+<div class="flex gap-2 rounded-lg bg-background-light dark:bg-background-dark p-1">
+<button class="px-3 py-1 rounded-md text-sm font-medium bg-primary text-white">Weekly</button>
+<button class="px-3 py-1 rounded-md text-sm font-medium text-text-light/70 dark:text-text-dark/70">Monthly</button>
+</div>
+</div>
+<div class="h-64">
+<svg fill="none" height="100%" preserveAspectRatio="xMidYMax meet" viewBox="0 0 472 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="chart-gradient" x1="0" x2="0" y1="0" y2="150">
+<stop stop-color="#00a854" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="#00a854" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#chart-gradient)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#00a854" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+<div class="flex justify-around mt-2 text-xs text-text-light/60 dark:text-text-dark/60">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span>Sun</span>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RiderLink GH - Booking Summary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#04a454",
+            "background-light": "#f5f8f7",
+            "background-dark": "#0f2319",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="bg-background-light dark:bg-background-dark border-b border-primary/20 dark:border-primary/30">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-3">
+<div class="bg-primary/20 text-primary p-2 rounded-full">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">RiderLink GH</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3XNXvRkhPp8OxVyd5843xk69qc6nyBUtLEkVag_zNq7cGYiB9M4LgkOF5LPBkbOF1YTQcJ_o3WjyhZH0THpqnyddWcbY6hEYit-eZr13O6Tj-8HL3JJ7KNjNRssXs22SKaDD6xqq_icNwAYs9ycB4RQjcp22s02QjcNB1lyPO5_F2CFauwsdhlxJZFdCakQdAOc5V4v1EAzcSdlXD_ArTaCCuUwPJveuZXEqzfS3N_FHEYqiGlx449F6cqMsZUgJ1pG9uhoWYuTw");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-md space-y-8">
+<div>
+<h2 class="text-center text-3xl font-extrabold text-gray-900 dark:text-white">Booking Summary</h2>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl shadow-lg space-y-6 border border-gray-200 dark:border-gray-700">
+<div class="space-y-4">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Rider Details</h3>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvav0sAyxyGpAc4t3gAC8A2KpKnXPHw93fNTFAJB2cZolC6OvpmVu0WMCiAKwAnRdmuPOCrinWL5O68Yx-W7Y4f_U6VaKHVzA5vnX1vFwEglUYlhSLT-BykG7fF8UBRLAXvo4rliEGep9yKtzAaEiYawQSQvDJsfbmP40tahj3oea5cKNAfsg66PtwErx25QZk5bG3ULuFIbM4cZRz8ycUc2Jy2pSQ7GBiTGlFP0Z8NIBITNp2g8wBhuTDV_V3iJQFAelNSlaVmxE");'></div>
+<div>
+<p class="text-lg font-semibold text-gray-900 dark:text-white">Kwame Mensah</p>
+<p class="text-sm text-primary">Rating: 4.8 (120 reviews)</p>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-700"></div>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Job Type</h3>
+<div class="flex items-center gap-2">
+<div class="text-primary bg-primary/10 p-2 rounded-lg">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"></path>
+</svg>
+</div>
+<p class="text-base font-medium text-gray-800 dark:text-gray-200">Delivery</p>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Cost Estimate</h3>
+<div class="flex items-center gap-2">
+<div class="text-primary bg-primary/10 p-2 rounded-lg">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M216,136H200V120h16a8,8,0,0,0,0-16H200V46a8,8,0,0,0-16,0v58H119.42L70.31,41.08A8,8,0,0,0,56,46v58H40a8,8,0,0,0,0,16H56v16H40a8,8,0,0,0,0,16H56v58a8,8,0,0,0,16,0V152h64.58l49.11,62.92A8,8,0,0,0,192,218a7.8,7.8,0,0,0,2.6-.44A8,8,0,0,0,200,210V152h16a8,8,0,0,0,0-16Zm-32-16v16H144.39L131.9,120ZM72,69.25,99.12,104H72ZM72,136V120h39.61l12.49,16Zm112,50.75L156.88,152H184Z"></path>
+</svg>
+</div>
+<p class="text-base font-medium text-gray-800 dark:text-gray-200">GHS 25.00</p>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-700"></div>
+<div class="space-y-4">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white">Payment Method</h3>
+<fieldset class="space-y-3">
+<legend class="sr-only">Payment Method</legend>
+<div class="relative flex items-start">
+<div class="flex items-center h-5">
+<input checked="" class="focus:ring-primary h-4 w-4 text-primary border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-900" id="momo" name="payment-method" type="radio"/>
+</div>
+<div class="ml-3 text-sm">
+<label class="font-medium text-gray-700 dark:text-gray-300" for="momo">Mobile Money (MoMo)</label>
+</div>
+</div>
+<div class="relative flex items-start">
+<div class="flex items-center h-5">
+<input class="focus:ring-primary h-4 w-4 text-primary border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-900" id="cash" name="payment-method" type="radio"/>
+</div>
+<div class="ml-3 text-sm">
+<label class="font-medium text-gray-700 dark:text-gray-300" for="cash">Cash</label>
+</div>
+</div>
+</fieldset>
+</div>
+<div>
+<button class="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" type="submit">
+              Confirm Booking
+            </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
